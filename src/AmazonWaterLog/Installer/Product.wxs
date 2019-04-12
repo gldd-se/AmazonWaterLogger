@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="{973C6AFA-2E40-416E-A84B-EC3F3D19F1BC}" Version="1.0.0.0" Name="Amazon Bubbler" Language="1033" Manufacturer="Great Lakes Dredge and Dock" UpgradeCode="0DBC63A0-C4DA-4200-B5D2-0EA8CB9F84BD">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+		<Feature Id="ProductFeature" Title="Installer" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="CMP_ProgramMenu_AmazonBubblerEXEShortcut"/>
+      <ComponentRef Id="CMP_Desktop_AmazonBubblerEXEShortcut"/>
+		</Feature>
+    <UIRef Id="GlddUI_Minimal"/>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="GLDDFOLDER" Name="Gldd">
+          <Directory Id="INSTALLFOLDER" Name="AmazonBubbler" />
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuAmazonBubblerFolder" Name="AmazonBubbler"/>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop"/>
+    </Directory>
+	</Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <ComponentGroupRef Id="ProductComponentsFragment"/>
+      <ComponentGroupRef Id="AmazonBubblerInteropDLL"/>
+      <ComponentGroupRef Id="AmazonBubblerInteropTLB"/>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="ProgramMenuAmazonBubblerFolder">
+      <Component Id="CMP_ProgramMenu_AmazonBubblerEXEShortcut" Guid="{1172CE87-1F36-4B35-8178-E54F65CEFD44}">
+        <Shortcut Id="ProgramMenuAmazonBubblerEXEShortcut"
+          Name="Amazon Bubbler"
+          Target="[INSTALLFOLDER]Gldd.AmazonWaterLog.exe"/>
+        <RemoveFolder Id="RemoveProgramMenuAmazonBubblerFolder" On="uninstall"/>
+        <RegistryValue Id="REGVAL_ProgramMenu_AmazonBubblerLNK" Root="HKCU" Key="Software\Gldd\AmazonBubbler" Name="ProgramMenuShortcut" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="CMP_Desktop_AmazonBubblerEXEShortcut" Guid="{8BEA0403-C48D-4896-BDD4-2B0391ABF434}">
+        <Shortcut Id="DesktopAmazonBubblerEXEShortcut"
+          Name="Amazon Bubbler"
+          Target="[INSTALLFOLDER]Gldd.AmazonWaterLog.exe"/>
+        <RegistryValue Id="REGVAL_Desktop_AmazonBubblerLNK" Root="HKCU" Key="Software\Gldd\AmazonBubbler" Name="DesktopShortcut" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

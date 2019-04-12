@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmpE979685FE9A607F800C11519EF705050" Guid="*">
+                <File Id="fil8139741D3631915FEF600D3E13824E9D" KeyPath="yes" Source="$(var.GlddAmazonWaterLogSourceDir)\Gldd.AmazonWaterLog.exe" />
+            </Component>
+            <Component Id="cmpE931F2CB7C1C290DB60C5CEAC26F6317" Guid="*">
+                <File Id="filADB841CDC8D7FD3571F64AB09C0013D8" KeyPath="yes" Source="$(var.GlddAmazonWaterLogSourceDir)\Gldd.AmazonWaterLog.exe.config" />
+            </Component>
+            <Component Id="cmp5A8CD08D299347E558D9D8B47FABFC59" Guid="*">
+                <File Id="fil7ED805D4E444BD722BE993D977E5EF80" KeyPath="yes" Source="$(var.GlddAmazonWaterLogSourceDir)\Gldd.AmazonWaterLog.pdb" />
+            </Component>
+            <Component Id="cmp798847528DC4183D290A5D67FAD591BF" Guid="*">
+                <File Id="fil7CF883D12DCFC8C598FCBA6DC69EE676" KeyPath="yes" Source="$(var.GlddAmazonWaterLogSourceDir)\NModbus4.dll" />
+            </Component>
+            <Component Id="cmp59564654D02343646998A8D6A6F0C25F" Guid="*">
+                <File Id="fil86F2842A309A2CABD479166F2B4E0588" KeyPath="yes" Source="$(var.GlddAmazonWaterLogSourceDir)\Prism.dll" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ProductComponentsFragment">
+            <ComponentRef Id="cmpE979685FE9A607F800C11519EF705050" />
+            <ComponentRef Id="cmpE931F2CB7C1C290DB60C5CEAC26F6317" />
+            <ComponentRef Id="cmp5A8CD08D299347E558D9D8B47FABFC59" />
+            <ComponentRef Id="cmp798847528DC4183D290A5D67FAD591BF" />
+            <ComponentRef Id="cmp59564654D02343646998A8D6A6F0C25F" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Component Id="cmp3E6E9BF8E311DF1B4C91BEAF0BAF2B6F" Guid="*">
+                <Class Id="{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}" Context="InprocServer32" Description="AmazonBubblerInterop.BubblerInterop" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="AmazonBubblerInterop.BubblerInterop" Description="AmazonBubblerInterop.BubblerInterop" />
+                </Class>
+                <File Id="filC027567292D2B36D5A1BEF1B363FB5E8" KeyPath="yes" Source="$(var.AmazonBubblerInteropSourceDir)\AmazonBubblerInterop.dll" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32\1.0.0.0" Name="Class" Value="AmazonBubblerInterop.BubblerInterop" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32\1.0.0.0" Name="Assembly" Value="AmazonBubblerInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#filC027567292D2B36D5A1BEF1B363FB5E8]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32" Name="Class" Value="AmazonBubblerInterop.BubblerInterop" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32" Name="Assembly" Value="AmazonBubblerInterop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{AC5BBE5F-743C-4FFA-B7DE-DA7A08963058}\InprocServer32" Name="CodeBase" Value="file:///[#filC027567292D2B36D5A1BEF1B363FB5E8]" Type="string" Action="write" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="AmazonBubblerInteropDLL">
+            <ComponentRef Id="cmp3E6E9BF8E311DF1B4C91BEAF0BAF2B6F" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

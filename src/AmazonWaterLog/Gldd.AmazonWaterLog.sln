@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gldd.AmazonWaterLog", "Gldd.AmazonWaterLog\Gldd.AmazonWaterLog.csproj", "{F100B301-1F1A-456F-9AC4-26707B1D2BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gldd.AmazonWaterLog.Tests", "Gldd.AmazonWaterLog.Tests\Gldd.AmazonWaterLog.Tests.csproj", "{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonBubblerInterop", "Gldd.AmazonWaterLogInterop\AmazonBubblerInterop.csproj", "{292F34E6-B3FC-4B4A-9EAC-508815242051}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Debug|x86.Build.0 = Debug|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Release|x86.ActiveCfg = Release|Any CPU
+		{F100B301-1F1A-456F-9AC4-26707B1D2BB9}.Release|x86.Build.0 = Release|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFA9B8B9-8B47-42D8-BC6C-9036657B9DBE}.Release|x86.Build.0 = Release|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Debug|x86.Build.0 = Debug|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Release|x86.ActiveCfg = Release|Any CPU
+		{292F34E6-B3FC-4B4A-9EAC-508815242051}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD796E14-FE1C-42D9-9FBE-37982A51D8C7}
+	EndGlobalSection
+EndGlobal
