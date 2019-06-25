@@ -170,12 +170,14 @@ namespace Gldd.AmazonWaterLog
         {
             try
             {
-                LevelTrunion = await _client1.MeasureLevelAsync();
-                _bubblerService.LevelTrunion = LevelTrunion;
+             LevelTrunion = await _client1.MeasureLevelAsync();
+               _bubblerService.LevelTrunion = LevelTrunion;
                 DepthDifference = LevelSuction - LevelTrunion;
+                DepthDifference = (float)3.19;  //for testing
                 if (_distanceBetween < 1) _distanceBetween = 1;
                 if (DepthDifference != 0) CalculatedAngle = Math.Asin(DepthDifference / _distanceBetween) * (180.0 / Math.PI);//difference of suction depth and trunion depth
-                CalculatedAngle = Math.Round(CalculatedAngle, 1);                                           // divided by distance between trunion and suction outlet
+                CalculatedAngle = Math.Round(CalculatedAngle, 1);               // divided by distance between trunion and suction outlet
+                _bubblerService.CalculatedAngle = CalculatedAngle;
                 IPAddress1ErrorMessage = "";
                 
             }
@@ -205,11 +207,11 @@ namespace Gldd.AmazonWaterLog
         {
             try
             {
-                LevelSuction = await _client2.MeasureLevelAsync();
+               LevelSuction = await _client2.MeasureLevelAsync();
                 _bubblerService.LevelSuction=LevelSuction;
-
+                if (_distanceBetween < 1) _distanceBetween = 1;
                 DepthDifference = LevelSuction - LevelTrunion;
-                if (DepthDifference != 0) CalculatedAngle = Math.Asin(DepthDifference / 61) * (180.0 / Math.PI);
+                if (DepthDifference != 0) CalculatedAngle = Math.Asin(DepthDifference / _distanceBetween) * (180.0 / Math.PI);
                 CalculatedAngle = Math.Round(CalculatedAngle, 1);
                 _bubblerService.CalculatedAngle = CalculatedAngle;
                 IPAddress2ErrorMessage = "";

@@ -25,7 +25,8 @@ namespace Gldd.AmazonWaterLog
     {
         public double GetCalculatedAngle()
         {
-            return CalculatedAngle;
+             return CalculatedAngle;
+           // return 23.1;
         }
 
         public float GetLevelSuction()
